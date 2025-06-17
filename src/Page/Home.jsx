@@ -88,40 +88,40 @@ function Home() {
                             <h4 className='section-title'>Our Creations</h4>
                             <div className='creations-grid'>
                                 <div className='creation-item large'>
-                                    <img src="https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Creation 1" />
+                                    <img src="https://images.pexels.com/photos/5428836/pexels-photo-5428836.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Humpty Adventure" />
                                 </div>
                                 <div className='creation-item'>
-                                    <img src="https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=1" alt="Creation 2" />
+                                    <img src="https://images.pexels.com/photos/4792728/pexels-photo-4792728.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1" alt="Humpty Character" />
                                 </div>
                                 <div className='creation-item'>
-                                    <img src="https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=1" alt="Creation 3" />
+                                    <img src="https://images.pexels.com/photos/5428829/pexels-photo-5428829.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1" alt="Humpty World" />
                                 </div>
                                 <div className='creation-item'>
-                                    <img src="https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=1" alt="Creation 4" />
+                                    <img src="https://images.pexels.com/photos/4792729/pexels-photo-4792729.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1" alt="Humpty Friends" />
                                 </div>
                                 <div className='creation-item'>
-                                    <img src="https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=1" alt="Creation 5" />
+                                    <img src="https://images.pexels.com/photos/5428835/pexels-photo-5428835.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1" alt="Humpty Story" />
                                 </div>
                                 <div className='creation-item'>
-                                    <img src="https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=1" alt="Creation 6" />
+                                    <img src="https://images.pexels.com/photos/4792730/pexels-photo-4792730.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1" alt="Humpty Magic" />
                                 </div>
                                 <div className='creation-item'>
-                                    <img src="https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=1" alt="Creation 7" />
+                                    <img src="https://images.pexels.com/photos/5428834/pexels-photo-5428834.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1" alt="Humpty Universe" />
                                 </div>
                                 <div className='creation-item'>
-                                    <img src="https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=1" alt="Creation 8" />
+                                    <img src="https://images.pexels.com/photos/4792731/pexels-photo-4792731.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1" alt="Humpty Dreams" />
                                 </div>
                                 <div className='creation-item'>
-                                    <img src="https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=1" alt="Creation 9" />
+                                    <img src="https://images.pexels.com/photos/5428833/pexels-photo-5428833.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1" alt="Humpty Joy" />
                                 </div>
                                 <div className='creation-item'>
-                                    <img src="https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=1" alt="Creation 10" />
+                                    <img src="https://images.pexels.com/photos/4792732/pexels-photo-4792732.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1" alt="Humpty Fun" />
                                 </div>
                                 <div className='creation-item'>
-                                    <img src="https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=1" alt="Creation 11" />
+                                    <img src="https://images.pexels.com/photos/5428832/pexels-photo-5428832.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1" alt="Humpty Play" />
                                 </div>
                                 <div className='creation-item'>
-                                    <img src="https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=1" alt="Creation 12" />
+                                    <img src="https://images.pexels.com/photos/4792733/pexels-photo-4792733.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1" alt="Humpty Learn" />
                                 </div>
                             </div>
                         </Col>

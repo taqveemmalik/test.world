@@ -1,9 +1,17 @@
 .navbar{
-    background-color: $white;box-shadow: 0px 5px 50px 0px rgba(25, 38, 53, 0.2);padding: 0;z-index: 999;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 8px 32px 0px rgba(25, 38, 53, 0.15);
+    padding: 0;z-index: 999;
     display: flex;justify-content: space-between;align-items: center;position: fixed;left: 0;right: 0;top: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
     &.scroll-down{transform: translateY(-300px);}
-    .logo{background-color: $dark;padding: 5px 15px;
+    .logo{
+        background: linear-gradient(135deg, $dark 0%, #3d2a5c 100%);
+        padding: 5px 15px;
+        border-radius: 0 0 15px 0;
+        
         @media(max-width:1200px){padding: 15px 15px;}
         @media(max-width:767px){padding: 10px 15px;}
         @media(max-width:575px){padding: 10px 15px;}
@@ -18,21 +26,27 @@
         @media(max-width:991px){display: none;}
         @media(max-width:767px){margin-right: 0px;gap:15px;}
         @media(max-width:575px){gap:10px;}
-        li a{font-size: 22px;color: $dark;font-weight: 400;
+        li a{font-size: 22px;color: $dark;font-weight: 500;
             position: relative;
+            transition: all 0.3s ease;
+            
             @media(max-width:1200px){font-size: 18px;}
             @media(max-width:767px){font-size: 20px;}
             @media(max-width:575px){font-size: 18px;}
-            &:hover{color: $color;}
+            &:hover{color: $color;transform: translateY(-2px);}
             &:before{
                 position: absolute;content: "";opacity: 0;
                 left: 0;right: 0;height: 3px;bottom: -4px;
-                background-color: $color;border-radius: 15px;
+                background: linear-gradient(90deg, $color 0%, $orange 100%);
+                border-radius: 15px;
+                transition: opacity 0.3s ease;
             }
             &:after{
                 position: absolute;content: "";opacity: 0;
                 left: 10px;right: 10px;height: 3px;bottom: -10px;
-                background-color: $color;border-radius: 15px;
+                background: linear-gradient(90deg, $color 0%, $orange 100%);
+                border-radius: 15px;
+                transition: opacity 0.3s ease;
             }
             &.active{
                 color: $color;
@@ -52,8 +66,11 @@
 // TOGGLE BUTTON
 .navbar-toggler{
     border: none;padding: 0;width: 50px;height: 50px;display: flex !important;margin-right: 30px;
-    justify-content: center;align-items: center;position: relative;background-color: $dark;
+    justify-content: center;align-items: center;position: relative;
+    background: linear-gradient(135deg, $dark 0%, #3d2a5c 100%);
     margin-left: 150px;border-radius: 12px;
+    transition: all 0.3s ease;
+    
     @media(max-width:1200px){margin-left: 100px;}
     @media(max-width:767px){width: 40px;height: 40px;margin-left:0;margin-right: 15px;}
 
@@ -81,10 +98,11 @@
     }
     &:active,&:focus-visible,
     &:hover {
-        background-color: $color !important;
+        background: linear-gradient(135deg, $color 0%, #ff0080 100%) !important;
+        transform: scale(1.05);
       &:before,&:after,
       span {
-        background-color: $black;
+        background-color: $white;
       }
     }
   }
@@ -92,8 +110,11 @@
 
 //   NavBar Display
   .navbar--display{
-    position: fixed;left: 0;top: 0;right: 0;background-color: $dark;z-index: 9999;padding: 70px;transform: translateY(-120vh);@include trans1;height: 100vh;
+    position: fixed;left: 0;top: 0;right: 0;
+    background: linear-gradient(135deg, $dark 0%, #3d2a5c 100%);
+    z-index: 9999;padding: 70px;transform: translateY(-120vh);@include trans1;height: 100vh;
     overflow: hidden;
+    
     @media(max-width:1400px){padding: 60px;}
     @media(max-width:1200px){padding: 50px;}
     @media(max-width:991px){padding: 40px;}
@@ -103,21 +124,27 @@
         @media(max-width:991px){display: flex;flex-wrap: wrap;margin-bottom:30px;}
         @media(max-width:767px){margin-right: 0px;gap:20px;}
         @media(max-width:575px){gap:10px;}
-        li a{font-size: 22px;color: $white;font-weight: 400;margin-bottom:10px;
+        li a{font-size: 22px;color: $white;font-weight: 500;margin-bottom:10px;
             position: relative;
+            transition: all 0.3s ease;
+            
             @media(max-width:991px){font-size: 22px;}
             @media(max-width:767px){font-size: 20px;}
             @media(max-width:575px){font-size: 18px;}
-            &:hover{color: $color;}
+            &:hover{color: $color;transform: translateY(-2px);}
             &:before{
                 position: absolute;content: "";opacity: 0;
                 left: 0;right: 0;height: 3px;bottom: -4px;
-                background-color: $color;border-radius: 15px;
+                background: linear-gradient(90deg, $color 0%, $orange 100%);
+                border-radius: 15px;
+                transition: opacity 0.3s ease;
             }
             &:after{
                 position: absolute;content: "";opacity: 0;
                 left: 10px;right: 10px;height: 3px;bottom: -10px;
-                background-color: $color;border-radius: 15px;
+                background: linear-gradient(90deg, $color 0%, $orange 100%);
+                border-radius: 15px;
+                transition: opacity 0.3s ease;
             }
             &.active{
                 color: $color;
@@ -131,8 +158,10 @@
     &.open{
         transform: translateY(0vh);
     }
-    hr{border-color: #ffffff1a;}
-    .navbar-toggler{background-color: $white;margin:0;
+    hr{border-color: rgba(255, 255, 255, 0.2);}
+    .navbar-toggler{
+        background: linear-gradient(135deg, $white 0%, #f8f9fa 100%);
+        margin:0;
         span{background-color: $dark;}
         &:before,
         &:after{background-color: $dark;}
@@ -146,7 +175,9 @@
         @media(max-width:767px){padding: 0;}
     }
     .nav-btn-list{display: flex;justify-content: flex-end;align-items: center;gap: 15px;
-        li a{font-size: 18px;text-transform: uppercase;background-color: $color;}
+        li a{font-size: 18px;text-transform: uppercase;
+            background: linear-gradient(135deg, $color 0%, #ff0080 100%);
+        }
         @media(max-width:767px){gap: 20px;flex-direction: column;width: 100%;
             li{width: 100%;}
             a{width: 100%;}
@@ -155,8 +186,9 @@
     .nav-link-list{display: flex;flex-direction:column;gap: 10px;margin-bottom: 20px;
         @media(max-width:767px){margin-bottom: 30px;}
         li{
-            a{font-size: 36px;color: $white;font-weight: 500;text-transform: uppercase;
-                &:hover{color:$color;}
+            a{font-size: 36px;color: $white;font-weight: 600;text-transform: uppercase;
+                transition: all 0.3s ease;
+                &:hover{color:$color;transform: translateX(10px);}
                 @media(max-width:991px){font-size: 30px;}
             }
         }
@@ -164,7 +196,8 @@
     .nav-small-list{display: flex;flex-direction:column;gap: 10px;
         li{
             a{font-size: 20px;color: $white;font-weight: 500;text-transform: uppercase;
-                &:hover{color:$color;}
+                transition: all 0.3s ease;
+                &:hover{color:$color;transform: translateX(5px);}
                 @media(max-width:991px){font-size: 18px;}
             }
         }

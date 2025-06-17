@@ -1,5 +1,35 @@
 .header{width: 100%;height: 100vh;position: relative;
+    background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 25%, #45B7D1 50%, #96CEB4 75%, #FFEAA7 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    
     @media(max-width:767px){min-height: 450px;}
+    
+    // Add floating elements for more dynamic feel
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        top: 20%;
+        left: 10%;
+        animation: float 8s ease-in-out infinite;
+    }
+    
+    &:after {
+        content: "";
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        bottom: 20%;
+        right: 15%;
+        animation: float 12s ease-in-out infinite reverse;
+    }
+    
     .text-cntnr{position: absolute;left: 0;right: 0;bottom: 0;z-index: 2;display: flex;justify-content: center;align-items: center;
         .text-cntnr-inner{position: relative;overflow: hidden;width:225px;
             animation: texty 1.5s linear;-webkit-animation: texty 1.5s linear;
@@ -21,13 +51,14 @@
         h1{font-size:300px;font-weight: 800;color: $white;margin:0;text-transform: uppercase;text-align: center;
             display: flex;justify-content: center;align-items: center;line-height: 210px;width: 1320px;
             animation: rotaty 1.5s linear;-webkit-animation: rotaty 1.5s linear;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
             
             @media(max-width:1400px){width: 1146px;}
             @media(max-width:1200px){width: 1000px;}
             @media(max-width:991px){width: 720px;}
             @media(max-width:767px){width: 520px;}
             @media(max-width:575px){width: 280px;}
-            span{color: $color;}
+            span{color: $color;text-shadow: 4px 4px 8px rgba(255, 0, 80, 0.5);}
             @media(max-width:1400px){font-size: 260px;line-height: 200px;}
             @media(max-width:1200px){font-size: 220px;line-height: 190px;}
             @media(max-width:991px){font-size: 160px;line-height: 130px;}
@@ -37,14 +68,22 @@
     }
 }
 
-// @-webkit-keyframes texty{
-//     0% { -webkit-transform: translateY(100px);opacity: 0; }
-//     100% { -webkit-transform: translateY(0px);  opacity: 1;}
-//   }
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 @keyframes rotaty{    
     0%{transform:rotate(-45deg)}
     100%{transform: rotate(0deg);}
 }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-30px); }
+}
+
 @keyframes widthopen {
     0%   {width: 220px;}
     100% {width: 1320px;}
@@ -81,13 +120,16 @@
 }
 
 .inner-header{width: 100%;height: 100vh;position: relative;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    
     @media(max-width:767px){min-height: 450px;}
     .text-cntnr{position: absolute;left: 0;right: 0;top: 100px;z-index: 2;display: flex;justify-content: center;
         align-items: flex-start;
         .text-cntnr-inner{position: relative;}
         h1{font-size:180px;font-weight: 800;color: $white;margin:0;text-transform: uppercase;text-align: center;line-height: 140px;
             animation: texty 1s linear;-webkit-animation: texty 1.2s linear;
-            span{color: $color;display: inline-block;width: 100%;}
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            span{color: $color;display: inline-block;width: 100%;text-shadow: 3px 3px 6px rgba(255, 0, 80, 0.5);}
             @media(max-width:1400px){font-size: 160px;line-height: 120px;}
             @media(max-width:1200px){font-size: 140px;line-height: 100px;}
             @media(max-width:991px){font-size: 120px;line-height: 100px;}

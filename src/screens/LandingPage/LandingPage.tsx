@@ -1,29 +1,31 @@
 import React from "react";
 
-const heroBackground = new URL("../../Images/Group 11.png", import.meta.url).href;
-const logoImage = new URL("../../Images/Logo/Group 1.png", import.meta.url).href;
-const downloadLogo = new URL("../../Images/Logo/Group 9.png", import.meta.url).href;
-const playIcon = new URL("../../Images/Icons/Frame 4.png", import.meta.url).href;
-const playButton = new URL("../../Images/Icons/Frame 5.png", import.meta.url).href;
-const trailerThumbnail = new URL("../../Images/Posts/image.png", import.meta.url).href;
+const heroBackground = "/src/Images/Group 11.png";
+const logoImage = "/src/Images/Logo/Group 1.png";
+const downloadLogo = "/src/Images/Logo/Group 9.png";
+const playIcon = "/src/Images/Icons/Frame 4.png";
+const playButton = "/src/Images/Icons/Frame 5.png";
+const trailerThumbnail = "/src/Images/Posts/image.png";
+// Footer image path - will be updated when you provide the image
+const footerImage = "/src/Images/footer-image.png";
 import { Button } from "../../components/ui/button";
 
 // Game feature card images with text baked in
 const gameFeatures = [
   {
-    background: new URL("../../Images/Posts/Layer_1.png", import.meta.url).href,
+    background: "/src/Images/Posts/Layer_1.png",
     alt: "Advanced AI Enemies",
   },
   {
-    background: new URL("../../Images/Posts/Layer_2.png", import.meta.url).href,
+    background: "/src/Images/Posts/Layer_2.png",
     alt: "Realistic Flight Physics",
   },
   {
-    background: new URL("../../Images/Posts/Layer_3.png", import.meta.url).href,
+    background: "/src/Images/Posts/Layer_3.png",
     alt: "Vast Environments",
   },
   {
-    background: new URL("../../Images/Posts/Layer_4.png", import.meta.url).href,
+    background: "/src/Images/Posts/Layer_4.png",
     alt: "Single or Multiplayer Ready",
   },
 ];
@@ -31,27 +33,27 @@ const gameFeatures = [
 // Game screenshots data
 const gameScreenshots = [
   {
-    src: new URL("../../Images/Posts/image 2.png", import.meta.url).href,
+    src: "/src/Images/Posts/image 2.png",
     alt: "Game screenshot 1",
   },
   {
-    src: new URL("../../Images/Posts/image 4.png", import.meta.url).href,
+    src: "/src/Images/Posts/image 4.png",
     alt: "Game screenshot 2",
   },
   {
-    src: new URL("../../Images/Posts/image 3.png", import.meta.url).href,
+    src: "/src/Images/Posts/image 3.png",
     alt: "Game screenshot 3",
   },
   {
-    src: new URL("../../Images/Posts/image 7.png", import.meta.url).href,
+    src: "/src/Images/Posts/image 7.png",
     alt: "Game screenshot 4",
   },
   {
-    src: new URL("../../Images/Posts/image 6.png", import.meta.url).href,
+    src: "/src/Images/Posts/image 6.png",
     alt: "Game screenshot 5",
   },
   {
-    src: new URL("../../Images/Posts/image 5.png", import.meta.url).href,
+    src: "/src/Images/Posts/image 5.png",
     alt: "Game screenshot 6",
   },
 ];
@@ -59,34 +61,31 @@ const gameScreenshots = [
 export const LandingPage = (): JSX.Element => {
   return (
     <div className="relative bg-black flex flex-col items-center w-full overflow-hidden min-h-screen">
-      {/* Page-wide scrolling background */}
-      <div className="absolute inset-0 -z-10">
+      {/* Full-site background image - fixed and covering entire viewport */}
+      <div className="fixed inset-0 w-full h-full z-0">
         <img
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover object-center"
           alt="Space combat background"
           src={heroBackground}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60"></div>
       </div>
 
-      <div className="relative w-full max-w-screen-2xl mx-auto">
+      {/* Main content container with relative positioning */}
+      <div className="relative z-10 w-full max-w-screen-2xl mx-auto">
 
         {/* Navigation with improved styling */}
-        <header className="relative z-10 flex justify-center pt-8 pb-4">
+        <header className="relative flex justify-center pt-8 pb-4">
           <div className="flex items-center group cursor-pointer transition-all duration-300 hover:scale-105">
             <img
               src={logoImage}
-                // src={playIcon}
-              // src="/src/Images/Logo/Group 1.png"
+              alt="Galaxion Logo"
             />
-            {/* <span className="ml-3 [font-family:'Audiowide',Helvetica] font-normal text-white text-[26.1px] tracking-wider drop-shadow-lg">
-              Galaxion
-            </span> */}
           </div>
         </header>
 
         {/* Hero Section with enhanced visual effects */}
-        <section className="relative z-10 mt-32 px-4 md:px-8 lg:px-[155px] text-center lg:text-left">
+        <section className="relative mt-32 px-4 md:px-8 lg:px-[155px] text-center lg:text-left">
           {/* Blurred duplicate text behind the main heading */}
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center lg:justify-start">
             <h1 className="max-w-[753px] blur-[8px] [font-family:'Audiowide',Helvetica] text-[#f8572d] text-3xl md:text-5xl lg:text-[67.1px] leading-tight opacity-60">
@@ -108,7 +107,7 @@ export const LandingPage = (): JSX.Element => {
               <img
                 className="w-[33.01px] h-[21.7px] filter drop-shadow-md"
                 alt="Play icon"
-                src="/src/Images/Icons/Frame 4.png"
+                src={playIcon}
               />
               Play Now
             </Button>
@@ -123,7 +122,7 @@ export const LandingPage = (): JSX.Element => {
         </section>
 
         {/* Game Features Section with layer images */}
-        <section className="relative z-10 mt-[200px] md:mt-[300px] lg:mt-[400px] px-4 md:px-8 lg:px-[155px]">
+        <section className="relative mt-[200px] md:mt-[300px] lg:mt-[400px] px-4 md:px-8 lg:px-[155px]">
           <h2 className="text-center [font-family:'Audiowide',Helvetica] font-normal text-white text-3xl md:text-5xl lg:text-[67.1px] mb-8 tracking-wide drop-shadow-2xl">
             GAME FEATURES
           </h2>
@@ -150,7 +149,7 @@ export const LandingPage = (): JSX.Element => {
         </section>
 
         {/* In-Game Experience Section with improved grid */}
-        <section className="relative z-10 mt-[200px] md:mt-[300px] lg:mt-[400px] px-4 md:px-8 lg:px-[155px]">
+        <section className="relative mt-[200px] md:mt-[300px] lg:mt-[400px] px-4 md:px-8 lg:px-[155px]">
           <h2 className="text-center [font-family:'Audiowide',Helvetica] font-normal text-white text-3xl md:text-5xl lg:text-[67.1px] mb-8 tracking-wide drop-shadow-2xl">
             IN-GAME EXPERIENCE
           </h2>
@@ -174,7 +173,7 @@ export const LandingPage = (): JSX.Element => {
         </section>
 
         {/* Trailer Section with enhanced play button */}
-        <section className="relative z-10 mt-[200px] md:mt-[300px] lg:mt-[400px] px-4 md:px-8 lg:px-[155px]">
+        <section className="relative mt-[200px] md:mt-[300px] lg:mt-[400px] px-4 md:px-8 lg:px-[155px]">
           <h2 className="text-center [font-family:'Audiowide',Helvetica] font-normal text-white text-3xl md:text-5xl lg:text-[67.1px] mb-8 tracking-wide drop-shadow-2xl">
             WATCH THE TRAILER
           </h2>
@@ -201,7 +200,7 @@ export const LandingPage = (): JSX.Element => {
         </section>
 
         {/* Call to Action Section with improved buttons */}
-        <section className="relative z-10 mt-[200px] md:mt-[300px] lg:mt-[400px] px-4 md:px-8 lg:px-[155px]">
+        <section className="relative mt-[200px] md:mt-[300px] lg:mt-[400px] px-4 md:px-8 lg:px-[155px]">
           <h2 className="text-center [font-family:'Audiowide',Helvetica] font-normal text-white text-3xl md:text-5xl lg:text-[67.1px] mb-8 tracking-wide drop-shadow-2xl">
             READY TO TAKE FLIGHT?
           </h2>
@@ -235,18 +234,29 @@ export const LandingPage = (): JSX.Element => {
           </div>
         </section>
 
+        {/* Footer image section - positioned above the footer */}
+        <section className="relative mt-[200px] md:mt-[300px] lg:mt-[400px] px-4 md:px-8 lg:px-[155px]">
+          <div className="w-full flex justify-center">
+            <img
+              className="w-full max-w-[1314px] h-auto object-cover rounded-xl filter drop-shadow-2xl"
+              alt="Footer decorative image"
+              src={footerImage}
+              onError={(e) => {
+                // Hide image if it doesn't exist yet
+                e.currentTarget.style.display = 'none';
+              }}
+            />
+          </div>
+        </section>
+
         {/* Footer with enhanced styling */}
-        <footer className="relative z-10 mt-[200px] md:mt-[300px] lg:mt-[400px]">
-          <div className="w-full h-auto min-h-[290px] bg-gradient-to-b from-[#222222] via-[#111111] to-black flex flex-col items-center justify-center py-12 px-4">
+        <footer className="relative mt-[100px] md:mt-[200px]">
+          <div className="w-full h-auto min-h-[290px] bg-gradient-to-b from-[#222222]/90 via-[#111111]/90 to-black/90 backdrop-blur-sm flex flex-col items-center justify-center py-12 px-4">
             <div className="flex items-center mb-8 group cursor-pointer transition-all duration-300 hover:scale-105">
               <img
                 src={logoImage}
-                  // src={playIcon}
-                  // src={downloadLogo}
+                alt="Galaxion Logo"
               />
-              {/* <span className="ml-4 [font-family:'Audiowide',Helvetica] font-normal text-white text-[32px] md:text-[46.4px] tracking-wider drop-shadow-lg">
-                Galaxion
-              </span> */}
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -254,7 +264,7 @@ export const LandingPage = (): JSX.Element => {
                 <img
                   className="w-[22px] h-3.5 filter drop-shadow-sm"
                   alt="Play icon"
-                  src="/src/Images/Icons/Frame 4.png"
+                  src={playIcon}
                 />
                 Play Now
               </Button>
@@ -266,7 +276,7 @@ export const LandingPage = (): JSX.Element => {
                 <img
                   className="w-4 h-4"
                   alt="Download icon"
-                  src="/src/Images/Logo/Group 9.png"
+                  src={downloadLogo}
                 />
                 Download
               </Button>

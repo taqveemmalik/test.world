@@ -61,14 +61,16 @@ const gameScreenshots = [
 export const LandingPage = (): JSX.Element => {
   return (
     <div className="relative bg-black flex flex-col items-center w-full overflow-hidden min-h-screen">
-      {/* Full-site background image - fixed and covering entire viewport */}
-      <div className="fixed inset-0 w-full h-full z-0">
-        <img
-          className="w-full h-full object-cover object-center"
-          alt="Space combat background"
-          src={heroBackground}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60"></div>
+      {/* Full-site background image - covers entire page */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${heroBackground})`,
+          backgroundAttachment: 'fixed',
+          minHeight: '100vh'
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
       </div>
 
       {/* Main content container with relative positioning */}
@@ -85,7 +87,7 @@ export const LandingPage = (): JSX.Element => {
         </header>
 
         {/* Hero Section with enhanced visual effects */}
-        <section className="relative mt-32 px-4 md:px-8 lg:px-[155px] text-center lg:text-left">
+        <section className="relative mt-16 px-4 md:px-8 lg:px-[155px] text-center lg:text-left">
           {/* Blurred duplicate text behind the main heading */}
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center lg:justify-start">
             <h1 className="max-w-[753px] blur-[8px] [font-family:'Audiowide',Helvetica] text-[#f8572d] text-3xl md:text-5xl lg:text-[67.1px] leading-tight opacity-60">
@@ -122,7 +124,7 @@ export const LandingPage = (): JSX.Element => {
         </section>
 
         {/* Game Features Section with layer images */}
-        <section className="relative mt-[200px] md:mt-[300px] lg:mt-[400px] px-4 md:px-8 lg:px-[155px]">
+        <section className="relative mt-24 md:mt-32 lg:mt-40 px-4 md:px-8 lg:px-[155px]">
           <h2 className="text-center [font-family:'Audiowide',Helvetica] font-normal text-white text-3xl md:text-5xl lg:text-[67.1px] mb-8 tracking-wide drop-shadow-2xl">
             GAME FEATURES
           </h2>
@@ -149,7 +151,7 @@ export const LandingPage = (): JSX.Element => {
         </section>
 
         {/* In-Game Experience Section with improved grid */}
-        <section className="relative mt-[200px] md:mt-[300px] lg:mt-[400px] px-4 md:px-8 lg:px-[155px]">
+        <section className="relative mt-24 md:mt-32 lg:mt-40 px-4 md:px-8 lg:px-[155px]">
           <h2 className="text-center [font-family:'Audiowide',Helvetica] font-normal text-white text-3xl md:text-5xl lg:text-[67.1px] mb-8 tracking-wide drop-shadow-2xl">
             IN-GAME EXPERIENCE
           </h2>
@@ -173,7 +175,7 @@ export const LandingPage = (): JSX.Element => {
         </section>
 
         {/* Trailer Section with enhanced play button */}
-        <section className="relative mt-[200px] md:mt-[300px] lg:mt-[400px] px-4 md:px-8 lg:px-[155px]">
+        <section className="relative mt-24 md:mt-32 lg:mt-40 px-4 md:px-8 lg:px-[155px]">
           <h2 className="text-center [font-family:'Audiowide',Helvetica] font-normal text-white text-3xl md:text-5xl lg:text-[67.1px] mb-8 tracking-wide drop-shadow-2xl">
             WATCH THE TRAILER
           </h2>
@@ -200,7 +202,7 @@ export const LandingPage = (): JSX.Element => {
         </section>
 
         {/* Call to Action Section with improved buttons */}
-        <section className="relative mt-[200px] md:mt-[300px] lg:mt-[400px] px-4 md:px-8 lg:px-[155px]">
+        <section className="relative mt-24 md:mt-32 lg:mt-40 px-4 md:px-8 lg:px-[155px]">
           <h2 className="text-center [font-family:'Audiowide',Helvetica] font-normal text-white text-3xl md:text-5xl lg:text-[67.1px] mb-8 tracking-wide drop-shadow-2xl">
             READY TO TAKE FLIGHT?
           </h2>
@@ -235,7 +237,7 @@ export const LandingPage = (): JSX.Element => {
         </section>
 
         {/* Footer image section - positioned above the footer */}
-        <section className="relative mt-[200px] md:mt-[300px] lg:mt-[400px] px-4 md:px-8 lg:px-[155px]">
+        <section className="relative mt-24 md:mt-32 lg:mt-40 px-4 md:px-8 lg:px-[155px]">
           <div className="w-full flex justify-center">
             <img
               className="w-full max-w-[1314px] h-auto object-cover rounded-xl filter drop-shadow-2xl"
@@ -250,7 +252,7 @@ export const LandingPage = (): JSX.Element => {
         </section>
 
         {/* Footer with enhanced styling */}
-        <footer className="relative mt-[100px] md:mt-[200px]">
+        <footer className="relative mt-16 md:mt-24">
           <div className="w-full h-auto min-h-[290px] bg-gradient-to-b from-[#222222]/90 via-[#111111]/90 to-black/90 backdrop-blur-sm flex flex-col items-center justify-center py-12 px-4">
             <div className="flex items-center mb-8 group cursor-pointer transition-all duration-300 hover:scale-105">
               <img
